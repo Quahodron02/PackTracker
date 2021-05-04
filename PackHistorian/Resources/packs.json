@@ -485,6 +485,24 @@
         "jaJP": "ゴールデン荒ぶる大地の強者たち",
         "thTH": "Forged in the Barrens สีทอง"
     },
+    "713": {
+        "enUS": "Standard",
+        "enGB": "Standard",
+        "frFR": "Standard",
+        "deDE": "Standard",
+        "koKR": "정규",
+        "esES": "Estándar",
+        "esMX": "Estándar",
+        "ruRU": "Стандартный",
+        "zhTW": "標準",
+        "zhCN": "标准模式",
+        "itIT": "Standard",
+        "ptBR": "Padrão",
+        "plPL": "Standard",
+        "ptPT": "Padrão",
+        "jaJP": "スタンダード",
+        "thTH": "มาตรฐาน"
+    },
     "498": {
         "enUS": "Year of the Dragon Card Pack",
         "enGB": "Year of the Dragon Card Pack",
@@ -556,6 +574,24 @@
         "ptPT": "Pacote de cards: Mago",
         "jaJP": "メイジカードパック",
         "thTH": "ซองการ์ดเมจ"
+    },
+    "631": {
+        "enUS": "Druid Card Pack",
+        "enGB": "Druid Card Pack",
+        "frFR": "Paquet de cartes de druide",
+        "deDE": "Druidenpackung",
+        "koKR": "드루이드 카드 팩",
+        "esES": "Sobre de cartas de druida",
+        "esMX": "Paquete de cartas de Druida",
+        "ruRU": "Комплект карт друида",
+        "zhTW": "德魯伊卡牌包",
+        "zhCN": "德鲁伊卡牌包",
+        "itIT": "Busta di carte del Druido",
+        "ptBR": "Pacote de cards de Druida",
+        "plPL": "Pakiet kart druida",
+        "ptPT": "Pacote de cards de Druida",
+        "jaJP": "ドルイドカードパック",
+        "thTH": "ซองการ์ดดรูอิด"
     },
     "632": {
         "enUS": "Paladin Card Pack",
@@ -665,24 +701,6 @@
         "jaJP": "デーモンハンターカードパック",
         "thTH": "ซองการ์ดดีมอนฮันเตอร์"
     },
-    "631": {
-        "enUS": "Standard Druid Pack",
-        "enGB": "Standard Druid Pack",
-        "frFR": "Standard Druid Pack",
-        "deDE": "Standard Druid Pack",
-        "koKR": "Standard Druid Pack",
-        "esES": "Standard Druid Pack",
-        "esMX": "Standard Druid Pack",
-        "ruRU": "Standard Druid Pack",
-        "zhTW": "Standard Druid Pack",
-        "zhCN": "Standard Druid Pack",
-        "itIT": "Standard Druid Pack",
-        "ptBR": "Standard Druid Pack",
-        "plPL": "Standard Druid Pack",
-        "ptPT": "Standard Druid Pack",
-        "jaJP": "Standard Druid Pack",
-        "thTH": "Standard Druid Pack"
-    },
     "637": {
         "enUS": "Standard Warlock Pack",
         "enGB": "Standard Warlock Pack",
@@ -700,5 +718,23 @@
         "ptPT": "Standard Warlock Pack",
         "jaJP": "Standard Warlock Pack",
         "thTH": "Standard Warlock Pack"
+    },
+    "716": {
+        "enUS": "Golden Standard",
+        "enGB": "Golden Standard",
+        "frFR": "Golden Standard",
+        "deDE": "Golden Standard",
+        "koKR": "Golden Standard",
+        "esES": "Golden Standard",
+        "esMX": "Golden Standard",
+        "ruRU": "Golden Standard",
+        "zhTW": "Golden Standard",
+        "zhCN": "Golden Standard",
+        "itIT": "Golden Standard",
+        "ptBR": "Golden Standard",
+        "plPL": "Golden Standard",
+        "ptPT": "Golden Standard",
+        "jaJP": "Golden Standard",
+        "thTH": "Golden Standard"
     }
 }
