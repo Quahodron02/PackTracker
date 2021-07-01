@@ -413,6 +413,24 @@
         "jaJP": "荒ぶる大地の強者たち",
         "thTH": "Forged in the Barrens"
     },
+    "602": {
+        "enUS": "United in Stormwind",
+        "enGB": "United in Stormwind",
+        "frFR": "Unis à Hurlevent",
+        "deDE": "Vereint in Sturmwind",
+        "koKR": "스톰윈드",
+        "esES": "Unidos en Ventormenta",
+        "esMX": "Unidos en Ventormenta",
+        "ruRU": "Сплоченные Штормградом",
+        "zhTW": "暴風城",
+        "zhCN": "暴风城下的集结",
+        "itIT": "Uniti a Roccavento",
+        "ptBR": "Juntos em Ventobravo",
+        "plPL": "Zjednoczeni w Wichrogrodzie",
+        "ptPT": "Juntos em Ventobravo",
+        "jaJP": "風集うストームウィンド",
+        "thTH": "United in Stormwind"
+    },
     "603": {
         "enUS": "Golden Scholomance Academy",
         "enGB": "Golden Scholomance Academy",
@@ -520,6 +538,24 @@
         "ptPT": "Livre",
         "jaJP": "ワイルド",
         "thTH": "อิสระ"
+    },
+    "737": {
+        "enUS": "Golden United in Stormwind",
+        "enGB": "Golden United in Stormwind",
+        "frFR": "Unis à Hurlevent doré",
+        "deDE": "Vereint in Sturmwind (Golden)",
+        "koKR": "황금 스톰윈드",
+        "esES": "Unidos en Ventormenta dorado",
+        "esMX": "Dorado de Unidos en Ventormenta",
+        "ruRU": "Золотой комплект «Сплоченные Штормградом»",
+        "zhTW": "暴風城金卡",
+        "zhCN": "暴风城下的集结金卡",
+        "itIT": "Uniti a Roccavento Dorata",
+        "ptBR": "Juntos em Ventobravo Dourado",
+        "plPL": "Złoty zestaw Zjednoczeni w Wichrogrodzie",
+        "ptPT": "Juntos em Ventobravo Dourado",
+        "jaJP": "ゴールデン「風集うストームウィンド」",
+        "thTH": "United in Stormwind สีทอง"
     },
     "498": {
         "enUS": "Year of the Dragon Card Pack",
@@ -701,6 +737,24 @@
         "jaJP": "シャーマンカードパック",
         "thTH": "ซองการ์ดชาแมน"
     },
+    "637": {
+        "enUS": "Warlock Card Pack",
+        "enGB": "Warlock Card Pack",
+        "frFR": "Paquet de cartes de démoniste",
+        "deDE": "Hexenmeisterpackung",
+        "koKR": "흑마법사 카드 팩",
+        "esES": "Sobre de cartas de brujo",
+        "esMX": "Paquete de cartas de Brujo",
+        "ruRU": "Комплект карт чернокнижника",
+        "zhTW": "術士卡牌包",
+        "zhCN": "术士卡牌包",
+        "itIT": "Busta dello Stregone",
+        "ptBR": "Pacote de cards de Bruxo",
+        "plPL": "Pakiet kart czarnoksiężnika",
+        "ptPT": "Pacote de cards de Bruxo",
+        "jaJP": "ウォーロックカードパック",
+        "thTH": "ซองการ์ดวอร์ล็อค"
+    },
     "638": {
         "enUS": "Demon Hunter Card Pack",
         "enGB": "Demon Hunter Card Pack",
@@ -718,24 +772,6 @@
         "ptPT": "Pacote de cards: Caçador de Demônios",
         "jaJP": "デーモンハンターカードパック",
         "thTH": "ซองการ์ดดีมอนฮันเตอร์"
-    },
-    "637": {
-        "enUS": "Standard Warlock Pack",
-        "enGB": "Standard Warlock Pack",
-        "frFR": "Standard Warlock Pack",
-        "deDE": "Standard Warlock Pack",
-        "koKR": "Standard Warlock Pack",
-        "esES": "Standard Warlock Pack",
-        "esMX": "Standard Warlock Pack",
-        "ruRU": "Standard Warlock Pack",
-        "zhTW": "Standard Warlock Pack",
-        "zhCN": "Standard Warlock Pack",
-        "itIT": "Standard Warlock Pack",
-        "ptBR": "Standard Warlock Pack",
-        "plPL": "Standard Warlock Pack",
-        "ptPT": "Standard Warlock Pack",
-        "jaJP": "Standard Warlock Pack",
-        "thTH": "Standard Warlock Pack"
     },
     "716": {
         "enUS": "Golden Standard",
