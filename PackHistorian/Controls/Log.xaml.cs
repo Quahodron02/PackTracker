@@ -3,9 +3,12 @@ using PackTracker.Entity;
 using PackTracker.View;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace PackTracker.Controls
@@ -15,7 +18,10 @@ namespace PackTracker.Controls
     /// </summary>
     public partial class Log
     {
+        public static RoutedCommand CopyCommand = new RoutedCommand();
+        public static RoutedCommand SaveCommand = new RoutedCommand();
         private SolidColorBrush Legendary, Epic, Rare;
+        private readonly PackTracker.History _hist;
 
         public Log(PackTracker.History History)
         {
@@ -23,6 +29,8 @@ namespace PackTracker.Controls
             this.Legendary = (SolidColorBrush)this.FindResource("Legendary");
             this.Epic = (SolidColorBrush)this.FindResource("Epic");
             this.Rare = (SolidColorBrush)this.FindResource("Rare");
+
+            this._hist = History;
 
             Loaded += (sender, e) => this.AddLogs(History);
 
@@ -33,6 +41,29 @@ namespace PackTracker.Controls
                     this.AddLogs(e.NewItems.Cast<Pack>());
                 }
             };
+
+            CopyCommand.InputGestures.Add(new KeyGesture(Key.C, ModifierKeys.Control));
+            SaveCommand.InputGestures.Add(new KeyGesture(Key.S, ModifierKeys.Control));
+        }
+
+        private void OnCopyPressed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Clipboard.SetText(this.txt_Log.Text);
+            System.Media.SystemSounds.Asterisk.Play();
+        }
+
+        private void OnSavePressed(object sender, ExecutedRoutedEventArgs e)
+        {
+            var pnc = new PackNameConverter();
+            File.WriteAllLines("packtracker_export.csv", new string[] { "Time,Pack,Card 1,Card 2,Card 3,Card 4,Card 5" }.Concat(_hist.Select(p =>
+                string.Join(",",
+                    new string[0]
+                    .Append(p.Time.ToString("O"))
+                    .Append(pnc.Convert(p.Id, null, null, null).ToString())
+                    .Concat(p.Cards.Select(c => (c.Premium ? "GOLDEN " : "") + c.Rarity.ToString()))
+                ))));
+            System.Media.SystemSounds.Asterisk.Play();
+            System.Diagnostics.Process.Start("packtracker_export.csv");
         }
 
         private void AddLogs(IEnumerable<Pack> Packs)

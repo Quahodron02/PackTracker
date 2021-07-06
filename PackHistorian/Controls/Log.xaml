@@ -19,4 +19,8 @@
             <TextBlock Name="txt_Log" FontFamily="Miriam Fixed" FontSize="16" Padding="2" Background="Black" />
         </ScrollViewer>
     </Border>
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:Log.CopyCommand}" Executed="OnCopyPressed"/>
+        <CommandBinding Command="{x:Static local:Log.SaveCommand}" Executed="OnSavePressed"/>
+    </Window.CommandBindings>
 </controls:MetroWindow>
