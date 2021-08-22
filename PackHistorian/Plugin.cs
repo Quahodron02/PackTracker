@@ -16,7 +16,7 @@ namespace PackTracker
         private History _history;
         private IHistoryStorage _historyStorage = new XmlHistory();
         private Settings _settings;
-        private ISettingsStorage _settingsStorage = new XmlSettings();
+        private ISettingsStorage _settingsStorage = new SettingsStorage();
         private WindowManager _windows = new WindowManager(_name);
         private View.AverageCollection _averageCollection;
         private View.Cache.PityTimerRepository _pityTimers;
@@ -47,7 +47,7 @@ namespace PackTracker
                 this._settings = new Settings();
             }
 
-            this._pityTimers = new View.Cache.PityTimerRepository(this._history);
+            this._pityTimers = new View.Cache.PityTimerRepository(this._history, this._settings);
 
             //watcher
             this._watcher.PackOpened += (sender, e) =>

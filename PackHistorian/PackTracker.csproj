@@ -188,7 +188,7 @@
     <Compile Include="Controls\History.xaml.cs">
       <DependentUpon>History.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Storage\XmlSettings.cs" />
+    <Compile Include="Storage\SettingsStorage.cs" />
     <Compile Include="Update\Asset.cs" />
     <Compile Include="Update\Release.cs" />
     <Compile Include="Update\Updater.cs" />

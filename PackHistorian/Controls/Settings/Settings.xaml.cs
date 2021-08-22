@@ -11,7 +11,6 @@ namespace PackTracker.Controls.Settings
     /// </summary>
     public partial class Settings
     {
-        private PackTracker.Settings _settings;
         private bool allowClosing = false;
 
         public Settings(PackTracker.Settings Settings)
@@ -24,7 +23,6 @@ namespace PackTracker.Controls.Settings
             };
             this.lb_tabs.SelectedIndex = 0;
 
-            this._settings = Settings;
             this.AnimateSizeToContentStart();
         }
 

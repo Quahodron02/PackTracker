@@ -7,11 +7,13 @@ namespace PackTracker.View.Cache
     public class PityTimerRepository
     {
         private History _history;
+        private Settings _settings;
         private List<PityTimer> _cache = new List<PityTimer>();
 
-        public PityTimerRepository(History History)
+        public PityTimerRepository(History History, Settings settings)
         {
             this._history = History;
+            this._settings = settings;
         }
 
         public PityTimer GetPityTimer(int packId, Rarity rarity, bool premium, bool skipFirst)
@@ -19,7 +21,7 @@ namespace PackTracker.View.Cache
             var pt = this._cache.FirstOrDefault(x => x.PackId == packId && x.Rarity == rarity && x.Premium == premium && x.SkipFirst == skipFirst);
             if (!(pt is PityTimer))
             {
-                pt = new PityTimer(this._history, packId, rarity, premium, skipFirst);
+                pt = new PityTimer(this._history, packId, rarity, premium, skipFirst, this._settings);
                 this._cache.Add(pt);
             }
 

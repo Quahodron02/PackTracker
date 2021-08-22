@@ -1,16 +1,27 @@
 ﻿using Hearthstone_Deck_Tracker;
+using Newtonsoft.Json;
 using System.IO;
 using System.Xml;
 
 namespace PackTracker.Storage
 {
-    internal class XmlSettings : ISettingsStorage
+    internal class SettingsStorage : ISettingsStorage
     {
         public Settings Fetch()
         {
             var Settings = new Settings();
 
-            var path = Path.Combine(Config.AppDataPath, "PackTracker", "Settings.xml");
+            var path = Path.Combine(Config.AppDataPath, "PackTracker", "Settings.json");
+            try
+            {
+                return JsonConvert.DeserializeObject<Settings>(File.ReadAllText(path));
+            }
+            catch
+            {
+                // Supress
+            }
+
+            path = Path.Combine(Config.AppDataPath, "PackTracker", "Settings.xml");
             if (File.Exists(path))
             {
                 var Xml = new XmlDocument();
@@ -46,36 +57,13 @@ namespace PackTracker.Storage
 
         public void Store(Settings Settings)
         {
-            var Xml = new XmlDocument();
-            Xml.AppendChild(Xml.CreateXmlDeclaration("1.0", "UTF-8", null));
-
-            XmlNode Root = Xml.CreateElement("settings");
-            Xml.AppendChild(Root);
-
-            XmlNode SpoilNode = Xml.CreateElement("spoil");
-            SpoilNode.InnerText = Settings.Spoil.ToString();
-            Root.AppendChild(SpoilNode);
-
-            XmlNode PityOverlayNode = Xml.CreateElement("pityoverlay");
-            PityOverlayNode.InnerText = Settings.PityOverlay.ToString();
-            Root.AppendChild(PityOverlayNode);
-
-            XmlNode UpdateNode = Xml.CreateElement("update");
-            UpdateNode.InnerText = Settings.Update.ToString();
-            Root.AppendChild(UpdateNode);
-
-            XmlNode showuntracked = Xml.CreateElement("showuntracked");
-            showuntracked.InnerText = Settings.ShowUntracked.ToString();
-            Root.AppendChild(showuntracked);
-
             var path = Path.Combine(Config.AppDataPath, "PackTracker");
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
             }
-            path = Path.Combine(path, "Settings.xml");
 
-            Xml.Save(path);
+            File.WriteAllText(Path.Combine(path, "Settings.json"), JsonConvert.SerializeObject(Settings, Newtonsoft.Json.Formatting.Indented));
         }
     }
 }
