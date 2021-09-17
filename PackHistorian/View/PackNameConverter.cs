@@ -55,13 +55,24 @@ namespace PackTracker.View
             return value;
         }
 
-        public static string Convert(int packId, Locale lang)
+        public static string Convert(int packId, Locale lang = Locale.UNKNOWN)
         {
             if (PackNames.ContainsKey(packId))
             {
-                if (PackNames[packId].ContainsKey(lang))
+                switch (lang)
                 {
-                    return PackNames[packId][lang];
+                    case Locale.UNKNOWN:
+                    {
+                        if (Enum.TryParse(_config.SelectedLanguage, out Locale defaultLang))
+                        {
+                            return PackNames[packId][defaultLang];
+                        }
+                        break;
+                    }
+                    default:
+                    {
+                        return PackNames[packId].ContainsKey(lang) ? PackNames[packId][lang] : PackNames[packId][Locale.enUS];
+                    }
                 }
             }
 

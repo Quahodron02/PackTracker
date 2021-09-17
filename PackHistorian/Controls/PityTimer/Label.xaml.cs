@@ -97,7 +97,7 @@ namespace PackTracker.Controls.PityTimer
         private string GeneratePopupText()
         {
             var rarity = this.RarityPlaceholder ?? "a card of the respective rarity";
-            var packName = this._packId != null ? View.PackNameConverter.Convert((int)this._packId, HearthDb.Enums.Locale.enUS) : "the selected set";
+            var packName = this._packId != null ? View.PackNameConverter.Convert((int)this._packId) : "the selected set";
 
             var sb = new StringBuilder();
             sb.AppendLine("This is your pity counter.");

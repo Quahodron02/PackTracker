@@ -1,12 +1,12 @@
 ﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:PackTracker.Controls.PityTimer"
              xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="PackTracker.Controls.PityTimer.Label"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              DataContextChanged="This_DataContextChanged"
              Height="{DynamicResource SideLength}" Width="{DynamicResource SideLength}"
              MinHeight="{DynamicResource SideLength}" MinWidth="{DynamicResource SideLength}"
@@ -26,7 +26,7 @@
         </Grid.RowDefinitions>
 
         <Popup Name="pu_Popup" StaysOpen="False" PlacementTarget="{Binding ElementName=btn_Popup}" Placement="Bottom" IsOpen="{Binding Popup, UpdateSourceTrigger=PropertyChanged}">
-            <Border BorderThickness="1" Background="LemonChiffon" Padding="2">
+            <Border BorderThickness="1" Padding="2">
                 <TextBlock Text="{Binding PopupText, UpdateSourceTrigger=PropertyChanged}" />
             </Border>
         </Popup>
