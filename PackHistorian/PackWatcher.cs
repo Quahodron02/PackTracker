@@ -62,7 +62,8 @@ namespace PackTracker
                 return;
             }
 
-            if (Mode == Mode.PACKOPENING)
+            // LETTUCE_PACK_OPENING (28) is not defined by HDT
+            if (Mode == Mode.PACKOPENING || (int)Mode == 28)
             {
                 foreach (var hs in Process.GetProcessesByName("Hearthstone"))
                 {
