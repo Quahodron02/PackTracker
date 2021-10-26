@@ -106,10 +106,14 @@ namespace PackTracker.View
             [465] = card => card.Set == CardSet.EXPERT1,
             [468] = card => card.Set == CardSet.SCHOLOMANCE,
             [553] = card => card.Set == CardSet.THE_BARRENS,
+            [602] = card => card.Set == CardSet.STORMWIND,
             [603] = card => card.Set == CardSet.SCHOLOMANCE,
             [616] = card => card.Set == CardSet.DARKMOON_FAIRE,
             [643] = card => card.Set == CardSet.DARKMOON_FAIRE,
             [686] = card => card.Set == CardSet.THE_BARRENS,
+            [713] = _ => true, // Standard, may change over time
+            [714] = _ => true, // Wild, may change over time
+            [737] = card => card.Set == CardSet.STORMWIND,
             [498] = card => card.Set == CardSet.DALARAN || card.Set == CardSet.ULDUM || card.Set == CardSet.DRAGONS,
             [688] = card => card.Set == CardSet.BLACK_TEMPLE || card.Set == CardSet.SCHOLOMANCE || card.Set == CardSet.DARKMOON_FAIRE,
             [470] = card => card.Class == CardClass.HUNTER && (int)card.Set > (int)CardSet.TROLL,
@@ -122,6 +126,9 @@ namespace PackTracker.View
             [636] = card => card.Class == CardClass.SHAMAN && (int)card.Set > (int)CardSet.TROLL,
             [637] = card => card.Class == CardClass.WARLOCK && (int)card.Set > (int)CardSet.TROLL,
             [638] = card => card.Class == CardClass.DEMONHUNTER && (int)card.Set > (int)CardSet.TROLL,
+            [713] = _ => true, // Golden Standard, may change over time
+            [629] = _ => true, // Mercenaries Pack, untrackable yet
+            [722] = card => card.Rarity == HearthDb.Enums.Rarity.EPIC, // Epic Packs, not sure what's inside
         };
 
         public ManualPackInsert()
