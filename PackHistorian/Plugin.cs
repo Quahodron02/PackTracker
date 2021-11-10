@@ -26,7 +26,6 @@ namespace PackTracker
         public Plugin()
         {
             this._watcher = new PackWatcher();
-            Hearthstone_Deck_Tracker.API.GameEvents.OnModeChanged.Add(this._watcher.HandleMode);
             this._updater = new Updater();
 
             try
@@ -100,6 +99,7 @@ namespace PackTracker
 
         public void OnLoad()
         {
+            Hearthstone_Deck_Tracker.API.GameEvents.OnModeChanged.Add(this._watcher.HandleMode);
             this._watcher.Start();
 
             if (this._settings.Update)
