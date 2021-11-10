@@ -22,11 +22,6 @@ namespace PackTracker
         public event EventHandler PackScreenEntered;
         public event EventHandler PackScreenLeft;
 
-        public PackWatcher()
-        {
-            Hearthstone_Deck_Tracker.API.GameEvents.OnModeChanged.Add(this.HandleMode);
-        }
-
         private void NewPack(object sender, PackEventArgs e)
         {
             var Time = DateTime.Now;
@@ -55,7 +50,7 @@ namespace PackTracker
             PackOpened?.Invoke(this, new PackOpenedEventArgs(Pack));
         }
 
-        private void HandleMode(Mode Mode)
+        internal void HandleMode(Mode Mode)
         {
             if (!this.Running)
             {

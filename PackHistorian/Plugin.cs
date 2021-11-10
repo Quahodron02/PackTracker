@@ -26,6 +26,7 @@ namespace PackTracker
         public Plugin()
         {
             this._watcher = new PackWatcher();
+            Hearthstone_Deck_Tracker.API.GameEvents.OnModeChanged.Add(this._watcher.HandleMode);
             this._updater = new Updater();
 
             try
