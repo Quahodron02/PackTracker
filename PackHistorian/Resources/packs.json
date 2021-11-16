@@ -826,5 +826,41 @@
         "ptPT": "Epic Packs",
         "jaJP": "Epic Packs",
         "thTH": "Epic Packs"
+    },
+    "665": {
+        "enUS": "Fractured in Alterac Valley",
+        "enGB": "Fractured in Alterac Valley",
+        "frFR": "Divisés en Alterac",
+        "deDE": "Gespalten im Alteractal",
+        "koKR": "알터랙 계곡",
+        "esES": "Divididos en el Valle de Alterac",
+        "esMX": "Divididos en el Valle de Alterac",
+        "ruRU": "Разделенные Альтераком",
+        "zhTW": "決戰奧山",
+        "zhCN": "奥特兰克的决裂",
+        "itIT": "Divisi nella Valle d'Alterac",
+        "ptBR": "Divididos no Vale Alterac",
+        "plPL": "Rozbici w Dolinie Alterak",
+        "ptPT": "Divididos no Vale Alterac",
+        "jaJP": "烈戦のアルタラック",
+        "thTH": "Fractured in Alterac Valley"
+    },
+    "841": {
+        "enUS": "Golden Fractured in Alterac Valley",
+        "enGB": "Golden Fractured in Alterac Valley",
+        "frFR": "Divisés en Alterac doré",
+        "deDE": "Gespalten im Alteractal (Golden)",
+        "koKR": "황금 알터랙 계곡",
+        "esES": "Doradas de Divididos en el Valle de Alterac",
+        "esMX": "Dorado de Divididos en el Valle de Alterac",
+        "ruRU": "Разделенные Альтераком (золото)",
+        "zhTW": "決戰奧山金卡",
+        "zhCN": "奥特兰克的决裂金卡",
+        "itIT": "Divisi nella Valle d'Alterac Dorata",
+        "ptBR": "Divididos no Vale Alterac Dourado",
+        "plPL": "Złoci Rozbici w Dolinie Alterak",
+        "ptPT": "Divididos no Vale Alterac Dourado",
+        "jaJP": "ゴールデン「烈戦のアルタラック」",
+        "thTH": "Fractured in Alterac Valley สีทอง"
     }
 }
