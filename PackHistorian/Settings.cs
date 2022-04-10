@@ -7,5 +7,6 @@
         public bool Update { get; set; } = true;
         public bool ShowUntracked { get; set; } = true;
         public bool GoldenResetRegularPityTimer { get; set; } = false;
+        public bool RightmostPityTimerOverlay { get; set; } = true;
     }
 }

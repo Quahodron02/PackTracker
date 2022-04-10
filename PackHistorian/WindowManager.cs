@@ -1,4 +1,5 @@
-﻿using PackTracker.Controls;
+﻿using Hearthstone_Deck_Tracker;
+using PackTracker.Controls;
 using PackTracker.Storage;
 using PackTracker.View.Cache;
 using System;
@@ -142,16 +143,32 @@ namespace PackTracker
             Win.ShowDialog();
         }
 
-        public void ShowPityTimerOverlay(History History, PityTimerRepository PityTimers)
+        public void ShowPityTimerOverlay(History History, PityTimerRepository PityTimers, bool rightmost)
         {
             if (this._pityOverlay == null)
             {
                 this._pityOverlay = new Controls.PityTimer.PityTimerOverlay(History, PityTimers);
-                Hearthstone_Deck_Tracker.Core.MainWindow.Closed += this.ClosePityTimerOverlay;
+                Core.MainWindow.Closed += this.ClosePityTimerOverlay;
                 this._pityOverlay.Closed += (sender, e) => this._pityOverlay = null;
             }
 
+
+            var relativeRight = .01;
+            var relativeBottom = .35;
+
             this._pityOverlay.Show();
+
+            if (User32.GetHearthstoneWindow() == IntPtr.Zero || rightmost)
+            {
+                this._pityOverlay.Left = SystemParameters.PrimaryScreenWidth - (SystemParameters.PrimaryScreenWidth * relativeRight) - this._pityOverlay.Width;
+                this._pityOverlay.Top = SystemParameters.PrimaryScreenHeight - (SystemParameters.PrimaryScreenHeight * relativeBottom) - this._pityOverlay.Height;
+            }
+            else
+            {
+                var rect = User32.GetHearthstoneRect(dpiScaling: true);
+                this._pityOverlay.Left = rect.Left + (rect.Width * relativeRight) - this._pityOverlay.Width;
+                this._pityOverlay.Top = rect.Top + (rect.Height * relativeBottom) - this._pityOverlay.Height;
+            }
         }
 
         private void ClosePityTimerOverlay(object sender, EventArgs e)

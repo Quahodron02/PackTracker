@@ -62,7 +62,13 @@ namespace PackTracker
                 }
             };
 
-            this._watcher.PackScreenEntered += (sender, e) => { if (this._settings.PityOverlay) { this._windows.ShowPityTimerOverlay(this._history, this._pityTimers); } };
+            this._watcher.PackScreenEntered += (sender, e) =>
+            {
+                if (this._settings.PityOverlay)
+                {
+                    this._windows.ShowPityTimerOverlay(this._history, this._pityTimers, this._settings.RightmostPityTimerOverlay);
+                }
+            };
             this._watcher.PackScreenLeft += (sender, e) => this._windows.ClosePityTimerOverlay();
         }
 

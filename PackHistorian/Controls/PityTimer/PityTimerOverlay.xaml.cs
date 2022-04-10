@@ -47,20 +47,6 @@ namespace PackTracker.Controls.PityTimer
             };
         }
 
-        private void UniformGrid_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.SetPosition();
-        }
-
-        private void SetPosition()
-        {
-            var relativeRight = .01;
-            var relativeBottom = .35;
-
-            this.Left = SystemParameters.PrimaryScreenWidth - (SystemParameters.PrimaryScreenWidth * relativeRight) - this.Width;
-            this.Top = SystemParameters.PrimaryScreenHeight - (SystemParameters.PrimaryScreenHeight * relativeBottom) - this.Height;
-        }
-
         private void Window_SourceInitialized(object sender, EventArgs e)
         {
             var helper = new WindowInteropHelper(this);

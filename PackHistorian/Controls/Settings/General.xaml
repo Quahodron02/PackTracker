@@ -31,5 +31,8 @@
 
         <Label Grid.Column="0" Grid.Row="3" Content="Golden Pity Timer" Target="{Binding ElementName=sw_GoldenTimer}" ToolTip="Golden card reset regular pity timer or not" />
         <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="3" Name="sw_GoldenTimer" IsChecked="{Binding GoldenResetRegularPityTimer, Mode=TwoWay}" HorizontalAlignment="Right" />
+
+        <Label Grid.Column="0" Grid.Row="3" Content="Rightmost Overlay" Target="{Binding ElementName=sw_Rightmost}" ToolTip="Pity timer overlay position (rightmost or inside the game)" />
+        <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="3" Name="sw_Rightmost" IsChecked="{Binding RightmostPityTimerOverlay, Mode=TwoWay}" HorizontalAlignment="Right" />
     </Grid>
 </metro:MetroContentControl>
