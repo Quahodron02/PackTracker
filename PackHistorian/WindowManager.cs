@@ -152,7 +152,6 @@ namespace PackTracker
                 this._pityOverlay.Closed += (sender, e) => this._pityOverlay = null;
             }
 
-
             var relativeRight = .01;
             var relativeBottom = .35;
 
@@ -166,8 +165,8 @@ namespace PackTracker
             else
             {
                 var rect = User32.GetHearthstoneRect(dpiScaling: true);
-                this._pityOverlay.Left = rect.Left + (rect.Width * relativeRight) - this._pityOverlay.Width;
-                this._pityOverlay.Top = rect.Top + (rect.Height * relativeBottom) - this._pityOverlay.Height;
+                this._pityOverlay.Left = rect.Right + (rect.Width * relativeRight) - this._pityOverlay.Width;
+                this._pityOverlay.Top = rect.Bottom + (rect.Height * relativeBottom) - this._pityOverlay.Height;
             }
         }
 
