@@ -166,7 +166,7 @@ namespace PackTracker
             {
                 var rect = User32.GetHearthstoneRect(dpiScaling: true);
                 this._pityOverlay.Left = rect.Right + (rect.Width * relativeRight) - this._pityOverlay.Width;
-                this._pityOverlay.Top = rect.Bottom + (rect.Height * relativeBottom) - this._pityOverlay.Height;
+                this._pityOverlay.Top = (rect.Height - this._pityOverlay.Height) / 2 + rect.Top;
             }
         }
 
