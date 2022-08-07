@@ -24,13 +24,13 @@
         <Label Grid.Column="0" Grid.Row="0" Content="Spoil" Target="{Binding ElementName=sw_Spoil}" ToolTip="Shows a pack's content when it's opened" />
         <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="0" Name="sw_Spoil" IsChecked="{Binding Spoil, Mode=TwoWay}" HorizontalAlignment="Right" />
 
-        <Label Grid.Column="0" Grid.Row="1" Content="Pity Timer Overlay" Target="{Binding ElementName=sw_PityOverlay}" ToolTip="Shows Pity Timers while Packs beeing opened" />
+        <Label Grid.Column="0" Grid.Row="1" Content="Pity Timer Overlay" Target="{Binding ElementName=sw_PityOverlay}" ToolTip="Shows Pity Timers while Packs being opened" />
         <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="1" Name="sw_PityOverlay" IsChecked="{Binding PityOverlay, Mode=TwoWay}" HorizontalAlignment="Right" />
 
         <Label Grid.Column="0" Grid.Row="2" Content="Show Untracked" Target="{Binding ElementName=sw_Hidden}" ToolTip="Shows untracked pack sets" />
         <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="2" Name="sw_Hidden" IsChecked="{Binding ShowUntracked, Mode=TwoWay}" HorizontalAlignment="Right" />
 
-        <Label Grid.Column="0" Grid.Row="3" Content="Golden Pity Timer" Target="{Binding ElementName=sw_GoldenTimer}" ToolTip="Golden card reset regular pity timer or not" />
+        <Label Grid.Column="0" Grid.Row="3" Content="Separate Golden PityTimer" Target="{Binding ElementName=sw_GoldenTimer}" ToolTip="Golden card reset regular pity timer or not" />
         <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="3" Name="sw_GoldenTimer" IsChecked="{Binding GoldenResetRegularPityTimer, Mode=TwoWay}" HorizontalAlignment="Right" />
 
         <Label Grid.Column="0" Grid.Row="4" Content="Rightmost Overlay" Target="{Binding ElementName=sw_Rightmost}" ToolTip="Pity timer overlay position (rightmost or inside the game)" />

@@ -33,6 +33,7 @@ namespace PackTracker.Controls
                 }
                 this._dropDown = new ObservableCollection<int>(PackNameConverter.PackNames.Keys.Concat(legacy).Distinct().OrderBy(x => x));
                 this.dd_Packs.ItemsSource = this._dropDown;
+                this.dd_Packs.SelectedIndex = 0;
                 return;
             }
 

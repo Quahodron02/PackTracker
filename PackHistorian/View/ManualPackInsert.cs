@@ -115,9 +115,11 @@ namespace PackTracker.View
             [694] = card => card.Set == CardSet.THE_SUNKEN_CITY,
             [713] = _ => true, // Standard, may change over time
             [714] = _ => true, // Wild, may change over time
+            [729] = card => card.Set == CardSet.REVENDRETH,
             [737] = card => card.Set == CardSet.STORMWIND,
             [841] = card => card.Set == CardSet.ALTERAC_VALLEY,
             [850] = card => card.Set == CardSet.THE_SUNKEN_CITY,
+            [874] = card => card.Set == CardSet.REVENDRETH,
             [498] = card => card.Set == CardSet.DALARAN || card.Set == CardSet.ULDUM || card.Set == CardSet.DRAGONS,
             [688] = card => card.Set == CardSet.BLACK_TEMPLE || card.Set == CardSet.SCHOLOMANCE || card.Set == CardSet.DARKMOON_FAIRE,
             [470] = card => card.Class == CardClass.HUNTER && (int)card.Set > (int)CardSet.TROLL,
