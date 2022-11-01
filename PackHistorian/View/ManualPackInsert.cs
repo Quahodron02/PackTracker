@@ -105,28 +105,14 @@ namespace PackTracker.View
             [423] = card => card.Set == CardSet.BLACK_TEMPLE,
             [465] = card => card.Set == CardSet.EXPERT1,
             [468] = card => card.Set == CardSet.SCHOLOMANCE,
+            [470] = card => card.Class == CardClass.HUNTER && (int)card.Set > (int)CardSet.TROLL,
+            [498] = card => card.Set == CardSet.DALARAN || card.Set == CardSet.ULDUM || card.Set == CardSet.DRAGONS,
+            [545] = card => card.Class == CardClass.MAGE && (int)card.Set > (int)CardSet.TROLL,
             [553] = card => card.Set == CardSet.THE_BARRENS,
             [602] = card => card.Set == CardSet.STORMWIND,
             [603] = card => card.Set == CardSet.SCHOLOMANCE,
             [616] = card => card.Set == CardSet.DARKMOON_FAIRE,
-            [643] = card => card.Set == CardSet.DARKMOON_FAIRE,
-            [665] = card => card.Set == CardSet.ALTERAC_VALLEY,
-            [686] = card => card.Set == CardSet.THE_BARRENS,
-            [694] = card => card.Set == CardSet.THE_SUNKEN_CITY,
-            [713] = _ => true, // Standard, may change over time
-            [714] = _ => true, // Wild, may change over time
-            [729] = card => card.Set == CardSet.REVENDRETH,
-            [737] = card => card.Set == CardSet.STORMWIND,
-            [841] = card => card.Set == CardSet.ALTERAC_VALLEY,
-            [821] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
-            [850] = card => card.Set == CardSet.THE_SUNKEN_CITY,
-            [874] = card => card.Set == CardSet.REVENDRETH,
-            [921] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
-            [904] = _ => true, // Golden Wild, may change over time
-            [498] = card => card.Set == CardSet.DALARAN || card.Set == CardSet.ULDUM || card.Set == CardSet.DRAGONS,
-            [688] = card => card.Set == CardSet.BLACK_TEMPLE || card.Set == CardSet.SCHOLOMANCE || card.Set == CardSet.DARKMOON_FAIRE,
-            [470] = card => card.Class == CardClass.HUNTER && (int)card.Set > (int)CardSet.TROLL,
-            [545] = card => card.Class == CardClass.MAGE && (int)card.Set > (int)CardSet.TROLL,
+            [629] = _ => true, // Mercenaries Pack, untrackable yet
             [631] = card => card.Class == CardClass.DRUID && (int)card.Set > (int)CardSet.TROLL,
             [632] = card => card.Class == CardClass.PALADIN && (int)card.Set > (int)CardSet.TROLL,
             [633] = card => card.Class == CardClass.WARRIOR && (int)card.Set > (int)CardSet.TROLL,
@@ -135,10 +121,24 @@ namespace PackTracker.View
             [636] = card => card.Class == CardClass.SHAMAN && (int)card.Set > (int)CardSet.TROLL,
             [637] = card => card.Class == CardClass.WARLOCK && (int)card.Set > (int)CardSet.TROLL,
             [638] = card => card.Class == CardClass.DEMONHUNTER && (int)card.Set > (int)CardSet.TROLL,
-            [918] = card => card.Class == CardClass.DEATHKNIGHT && (int)card.Set > (int)CardSet.TROLL,
+            [643] = card => card.Set == CardSet.DARKMOON_FAIRE,
+            [665] = card => card.Set == CardSet.ALTERAC_VALLEY,
+            [686] = card => card.Set == CardSet.THE_BARRENS,
+            [688] = card => card.Set == CardSet.BLACK_TEMPLE || card.Set == CardSet.SCHOLOMANCE || card.Set == CardSet.DARKMOON_FAIRE,
+            [694] = card => card.Set == CardSet.THE_SUNKEN_CITY,
             [713] = _ => true, // Golden Standard, may change over time
-            [629] = _ => true, // Mercenaries Pack, untrackable yet
+            [713] = _ => true, // Standard, may change over time
+            [714] = _ => true, // Wild, may change over time
             [722] = card => card.Rarity == HearthDb.Enums.Rarity.EPIC, // Epic Packs, not sure what's inside
+            [729] = card => card.Set == CardSet.REVENDRETH,
+            [737] = card => card.Set == CardSet.STORMWIND,
+            [821] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
+            [841] = card => card.Set == CardSet.ALTERAC_VALLEY,
+            [850] = card => card.Set == CardSet.THE_SUNKEN_CITY,
+            [874] = card => card.Set == CardSet.REVENDRETH,
+            [904] = _ => true, // Golden Wild, may change over time
+            [918] = card => card.Class == CardClass.DEATHKNIGHT && (int)card.Set > (int)CardSet.TROLL,
+            [921] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
         };
 
         public ManualPackInsert()
