@@ -26,7 +26,6 @@ namespace PackTracker.Controls.PityTimer
                 }
             };
 
-            this.dd_Packs.ShowUntracked = settings.ShowUntracked;
             Loaded += (sender, e) => this.dd_Packs.DataContext = History;
         }
     }

@@ -12,7 +12,6 @@ namespace PackTracker.View
 {
     internal class PackNameConverter : IValueConverter
     {
-        private static Config _config = Config.Instance;
         internal static Dictionary<int, Dictionary<Locale, string>> PackNames;
         static PackNameConverter()
         {
@@ -34,22 +33,7 @@ namespace PackTracker.View
 
             if (int.TryParse(value.ToString(), out var id))
             {
-                if (Enum.TryParse(_config.SelectedLanguage, out Locale lang))
-                {
-                    var converted = Convert(id, lang);
-                    if (!string.IsNullOrEmpty(converted))
-                    {
-                        return converted;
-                    }
-                }
-
-                if (PackNames.ContainsKey(id))
-                {
-                    if (PackNames[id].ContainsKey(Locale.enUS))
-                    {
-                        return PackNames[id][Locale.enUS];
-                    }
-                }
+                return Convert(id);
             }
 
             return value;
@@ -63,15 +47,15 @@ namespace PackTracker.View
                 {
                     case Locale.UNKNOWN:
                     {
-                        if (Enum.TryParse(_config.SelectedLanguage, out Locale defaultLang))
+                        if (Enum.TryParse(Config.Instance.SelectedLanguage, out Locale defaultLang))
                         {
-                            return PackNames[packId][defaultLang];
+                            return $"{PackNames[packId][defaultLang]} ({packId})";
                         }
                         break;
                     }
                     default:
                     {
-                        return PackNames[packId].ContainsKey(lang) ? PackNames[packId][lang] : PackNames[packId][Locale.enUS];
+                        return $"{(PackNames[packId].ContainsKey(lang) ? PackNames[packId][lang] : PackNames[packId][Locale.enUS])} ({packId})";
                     }
                 }
             }
