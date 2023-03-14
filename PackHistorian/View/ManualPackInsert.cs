@@ -135,10 +135,12 @@ namespace PackTracker.View
             [821] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
             [841] = card => card.Set == CardSet.ALTERAC_VALLEY,
             [850] = card => card.Set == CardSet.THE_SUNKEN_CITY,
+            [854] = card => card.Set == CardSet.BATTLE_OF_THE_BANDS,
             [874] = card => card.Set == CardSet.REVENDRETH,
             [904] = _ => true, // Golden Wild, may change over time
             [918] = card => card.Class == CardClass.DEATHKNIGHT && (int)card.Set > (int)CardSet.TROLL,
             [921] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
+            [932] = card => card.Set == CardSet.BATTLE_OF_THE_BANDS,
         };
 
         public ManualPackInsert()
