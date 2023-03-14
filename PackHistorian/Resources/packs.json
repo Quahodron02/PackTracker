@@ -1006,5 +1006,41 @@
         "ptPT": "Dourados Exclusivos de Ascensão do Lich Rei",
         "jaJP": "シグネチャーゴールデン・リッチキングの凱旋",
         "thTH": "March of the Lich King ซิกเนเจอร์สีทอง"
+    },
+    "854": {
+        "enUS": "Festival of Legends",
+        "enGB": "Festival of Legends",
+        "frFR": "La fête des légendes",
+        "deDE": "Festival der Legenden",
+        "koKR": "전설노래자랑",
+        "esES": "El Festival Legendario",
+        "esMX": "Festival de Leyendas",
+        "ruRU": "Фестиваль легенд",
+        "zhTW": "傳說音樂祭",
+        "zhCN": "传奇音乐节",
+        "itIT": "Festival delle Leggende",
+        "ptBR": "Festival das Lendas",
+        "plPL": "Festiwal Legend",
+        "ptPT": "Festival das Lendas",
+        "jaJP": "集え！レジェンド・フェス",
+        "thTH": "Festival of Legends"
+    },
+    "932": {
+        "enUS": "Golden Festival of Legends",
+        "enGB": "Golden Festival of Legends",
+        "frFR": "La fête des légendes dorée",
+        "deDE": "Festival der Legenden (Golden)",
+        "koKR": "황금 전설노래자랑",
+        "esES": "El Festival Legendario dorado",
+        "esMX": "Festival de Leyendas dorado",
+        "ruRU": "Золотой Фестиваль легенд",
+        "zhTW": "傳說音樂祭金卡",
+        "zhCN": "传奇音乐节金色包",
+        "itIT": "Festival delle Leggende Dorata",
+        "ptBR": "Festival das Lendas Dourado",
+        "plPL": "Złoty Festiwal Legend",
+        "ptPT": "Festival das Lendas Dourado",
+        "jaJP": "ゴールデン・集え！レジェンド・フェス",
+        "thTH": "Festival of Legends สีทอง"
     }
 }
