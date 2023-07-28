@@ -12,7 +12,7 @@ namespace PackTracker.Controls
 {
     public partial class PackDropDown : SplitButton
     {
-        private ObservableCollection<int> _dropDown;
+        private ObservableCollection<int> _dropDown;    
         private List<int> _allPackTypes;
 
         public PackDropDown()
