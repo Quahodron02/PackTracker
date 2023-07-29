@@ -87,7 +87,6 @@ namespace PackTracker.View
             [9] = card => card.Set == CardSet.GVG,
             [10] = card => card.Set == CardSet.TGT,
             [11] = card => card.Set == CardSet.OG,
-            [17] = card => card.Set == CardSet.EXPERT1,
             [18] = card => card.Set == CardSet.EXPERT1,
             [19] = card => card.Set == CardSet.GANGS,
             [20] = card => card.Set == CardSet.UNGORO,
@@ -100,7 +99,6 @@ namespace PackTracker.View
             [41] = card => card.Set == CardSet.UNGORO || card.Set == CardSet.ICECROWN || card.Set == CardSet.LOOTAPALOOZA,
             [49] = card => card.Set == CardSet.DALARAN,
             [128] = card => card.Set == CardSet.ULDUM,
-            [181] = card => card.Set == CardSet.EXPERT1,
             [347] = card => card.Set == CardSet.DRAGONS,
             [423] = card => card.Set == CardSet.BLACK_TEMPLE,
             [465] = card => card.Set == CardSet.EXPERT1,
@@ -129,9 +127,9 @@ namespace PackTracker.View
             [713] = _ => true, // Golden Standard, may change over time
             [713] = _ => true, // Standard, may change over time
             [714] = _ => true, // Wild, may change over time
-            [722] = card => card.Rarity == HearthDb.Enums.Rarity.EPIC, // Epic Packs, not sure what's inside
             [729] = card => card.Set == CardSet.REVENDRETH,
             [737] = card => card.Set == CardSet.STORMWIND,
+            [819] = card => card.Set == CardSet.TITANS,
             [821] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
             [841] = card => card.Set == CardSet.ALTERAC_VALLEY,
             [850] = card => card.Set == CardSet.THE_SUNKEN_CITY,
@@ -141,6 +139,9 @@ namespace PackTracker.View
             [918] = card => card.Class == CardClass.DEATHKNIGHT && (int)card.Set > (int)CardSet.TROLL,
             [921] = card => card.Set == CardSet.RETURN_OF_THE_LICH_KING,
             [932] = card => card.Set == CardSet.BATTLE_OF_THE_BANDS,
+            [937] = card => card.Set == CardSet.TITANS,
+            [938] = card => card.Set == CardSet.BLACK_TEMPLE || card.Set == CardSet.SCHOLOMANCE || card.Set == CardSet.DARKMOON_FAIRE,
+            [939] = card => card.Set == CardSet.BLACK_TEMPLE,
         };
 
         public ManualPackInsert()
