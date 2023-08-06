@@ -80,7 +80,7 @@ namespace PackTracker.View
 
         private readonly Dictionary<int, List<HDTCard>> _setsCache = new Dictionary<int, List<HDTCard>>();
 
-        private static readonly List<int> _golden = new List<int> { 23, 603, 643, 686 };
+        private static readonly List<int> _golden = new List<int> { 23, 603, 643, 686, 716, 737, 841, 850, 874, 904, 921, 932, 937, 938, 939 };
         private static readonly Dictionary<int, Func<HearthDb.Card, bool>> _filter = new Dictionary<int, Func<HearthDb.Card, bool>>
         {
             [1] = card => card.Set == CardSet.EXPERT1,
