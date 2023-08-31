@@ -917,6 +917,24 @@
         "jaJP": "ゴールデン「ナスリア城殺人事件」",
         "thTH": "Murder at Castle Nathria สีทอง"
     },
+    "894": {
+        "enUS": "Caverns of Time",
+        "enGB": "Caverns of Time",
+        "frFR": "Grottes du Temps",
+        "deDE": "Höhlen der Zeit",
+        "koKR": "시간의 동굴",
+        "esES": "Cavernas del Tiempo",
+        "esMX": "Cavernas del Tiempo",
+        "ruRU": "Пещеры Времени",
+        "zhTW": "時光之穴",
+        "zhCN": "时光之穴",
+        "itIT": "Caverne del Tempo",
+        "ptBR": "Cavernas do Tempo",
+        "plPL": "Jaskinie Czasu",
+        "ptPT": "Cavernas do Tempo",
+        "jaJP": "時の大洞窟",
+        "thTH": "Caverns of Time"
+    },
     "904": {
         "enUS": "Golden Wild",
         "enGB": "Golden Wild",
@@ -996,7 +1014,7 @@
         "deDE": "Goldene TITANEN",
         "koKR": "황금 티탄",
         "esES": "LOS TITANES dorados",
-        "esMX": "TITANES dorados",
+        "esMX": "Dorado de TITANES",
         "ruRU": "Золотой комплект «ТИТАНЫ»",
         "zhTW": "《泰坦創世紀》金卡",
         "zhCN": "泰坦诸神金色包",
@@ -1042,5 +1060,23 @@
         "ptPT": "Cinzas de Terralém Dourado",
         "jaJP": "ゴールデン灰に舞う降魔の狩人",
         "thTH": "Ashes of Outland สีทอง"
+    },
+    "945": {
+        "enUS": "Golden Caverns of Time",
+        "enGB": "Golden Caverns of Time",
+        "frFR": "Grottes du Temps doré",
+        "deDE": "Goldene Höhlen der Zeit",
+        "koKR": "황금 시간의 동굴",
+        "esES": "Cavernas del Tiempo doradas",
+        "esMX": "Dorado de Cavernas del Tiempo",
+        "ruRU": "Пещеры Времени (золото)",
+        "zhTW": "黃金時光之穴",
+        "zhCN": "时光之穴金色包",
+        "itIT": "Caverne del Tempo Dorata",
+        "ptBR": "Cavernas do Tempo Dourado",
+        "plPL": "Złote Jaskinie Czasu",
+        "ptPT": "Cavernas do Tempo Dourado",
+        "jaJP": "ゴールデン時の大洞窟",
+        "thTH": "Caverns of Time สีทอง"
     }
 }
