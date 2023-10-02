@@ -129,7 +129,7 @@ namespace PackTracker
             var monoObject = typeof(HearthMirror.Reflection).Invoke("GetService", "NetCache")
                 .HearthMirrorGet("m_netCache")?.HearthMirrorGet("valueSlots");
 
-            if (!(monoObject is object[] ie))
+            if (monoObject is not object[] ie)
             {
                 return null;
             }
@@ -149,10 +149,10 @@ namespace PackTracker
             try
             {
                 var boosterServices = GetNetCacheService("NetCacheBoosters");
-                var stacks = boosterServices?.HearthMirrorGet("<BoosterStacks>k__BackingField");
+                var stacks = boosterServices?.HearthMirrorGet("BoosterStacks");
                 var items = stacks?.HearthMirrorGet("_items");
 
-                if (!(items is object[] array))
+                if (items is not object[] array)
                 {
                     return;
                 }
@@ -166,8 +166,8 @@ namespace PackTracker
                         {
                             if (item != null)
                             {
-                                var id = (int) item.HearthMirrorGet("<Id>k__BackingField");
-                                var obtained = (int) item.HearthMirrorGet("<EverGrantedCount>k__BackingField");
+                                var id = (int) item.HearthMirrorGet("Id");
+                                var obtained = (int) item.HearthMirrorGet("EverGrantedCount");
                                 newdict.Add(id, obtained);
                             }
                         }
