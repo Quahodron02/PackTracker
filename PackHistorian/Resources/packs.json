@@ -305,24 +305,6 @@
         "jaJP": "灰に舞う降魔の狩人",
         "thTH": "Ashes of Outland"
     },
-    "465": {
-        "enUS": "Quest Pack",
-        "enGB": "Quest Pack",
-        "frFR": "Paquet de quête",
-        "deDE": "Questpackung",
-        "koKR": "퀘스트 팩",
-        "esES": "Sobre de misión",
-        "esMX": "Paquete de misiones",
-        "ruRU": "Комплект заданий",
-        "zhTW": "任務包",
-        "zhCN": "任务包",
-        "itIT": "Busta Missione",
-        "ptBR": "Pacote de Missões",
-        "plPL": "Pakiet zadań",
-        "ptPT": "Pacote de Missões",
-        "jaJP": "クエストパック",
-        "thTH": "ซองเควสต์"
-    },
     "468": {
         "enUS": "Scholomance Academy",
         "enGB": "Scholomance Academy",
@@ -989,6 +971,24 @@
         "jaJP": "シグネチャーゴールデン・リッチキングの凱旋",
         "thTH": "March of the Lich King ซิกเนเจอร์สีทอง"
     },
+    "922": {
+        "enUS": "Showdown in the Badlands",
+        "enGB": "Showdown in the Badlands",
+        "frFR": "Rixe en terres Ingrates",
+        "deDE": "Showdown im Ödland",
+        "koKR": "황야의 땅 결투",
+        "esES": "Duelo en las Tierras Inhóspitas",
+        "esMX": "Enfrentamiento en las Tierras Inhóspitas",
+        "ruRU": "Стычка в Бесплодных землях",
+        "zhTW": "決戰荒蕪之地",
+        "zhCN": "决战荒芜之地",
+        "itIT": "Resa dei Conti nelle Maleterre",
+        "ptBR": "Confronto Final nos Ermos",
+        "plPL": "Finałowe starcie na Bezludziu",
+        "ptPT": "Confronto Final nos Ermos",
+        "jaJP": "バッドランドの決斗",
+        "thTH": "Showdown in the Badlands"
+    },
     "932": {
         "enUS": "Golden Festival of Legends",
         "enGB": "Golden Festival of Legends",
@@ -1061,6 +1061,24 @@
         "jaJP": "ゴールデン灰に舞う降魔の狩人",
         "thTH": "Ashes of Outland สีทอง"
     },
+    "944": {
+        "enUS": "Wild West 2",
+        "enGB": "Wild West 2",
+        "frFR": "Ouest sauvage (partie 2)",
+        "deDE": "Wilder Westen 2",
+        "koKR": "거친 서부 2",
+        "esES": "Salvaje Oeste 2",
+        "esMX": "El salvaje oeste 2",
+        "ruRU": "Дикий Запад 2",
+        "zhTW": "狂野西部2",
+        "zhCN": "狂野西部2",
+        "itIT": "Selvaggio West 2",
+        "ptBR": "Oeste Selvagem 2",
+        "plPL": "Dziki Zachód 2",
+        "ptPT": "Oeste Selvagem 2",
+        "jaJP": "大西部2",
+        "thTH": "Wild West 2"
+    },
     "945": {
         "enUS": "Golden Caverns of Time",
         "enGB": "Golden Caverns of Time",
@@ -1078,5 +1096,23 @@
         "ptPT": "Cavernas do Tempo Dourado",
         "jaJP": "ゴールデン時の大洞窟",
         "thTH": "Caverns of Time สีทอง"
+    },
+    "952": {
+        "enUS": "Golden Showdown in the Badlands",
+        "enGB": "Golden Showdown in the Badlands",
+        "frFR": "Rixe en terres Ingrates doré",
+        "deDE": "Goldener Showdown im Ödland",
+        "koKR": "황금 황야의 땅 결투",
+        "esES": "Duelo en las Tierras Inhóspitas dorado",
+        "esMX": "Dorado de Enfrentamiento en las Tierras Inhóspitas",
+        "ruRU": "Золотой комплект «Стычки в Бесплодных землях»",
+        "zhTW": "黃金決戰荒蕪之地",
+        "zhCN": "决战荒芜之地金色包",
+        "itIT": "Resa dei Conti nelle Maleterre Dorata",
+        "ptBR": "Confronto Final nos Ermos Dourado",
+        "plPL": "Złote Finałowe starcie na Bezludziu",
+        "ptPT": "Confronto Final nos Ermos Dourado",
+        "jaJP": "ゴールデン・バッドランドの決斗",
+        "thTH": "Showdown in the Badlands สีทอง"
     }
 }
