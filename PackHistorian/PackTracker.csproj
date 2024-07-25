@@ -1,328 +1,62 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C5023C1-D9B6-4FFA-B3A2-2A8466DE5074}</ProjectGuid>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFramework>net472</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PackTracker</RootNamespace>
-    <AssemblyName>PackTracker</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-	<LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AssemblySearchPaths>
+      ..\HDT\Hearthstone Deck Tracker\\; $(AssemblySearchPaths)
+    </AssemblySearchPaths>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HearthDb">
-      <HintPath>..\HDT\Hearthstone Deck Tracker\HearthDb.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HearthMirror">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\HearthMirror.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HearthstoneDeckTracker">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\HearthstoneDeckTracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HearthWatcher">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\HearthWatcher.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LiveCharts">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\LiveCharts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LiveCharts.Wpf">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\LiveCharts.Wpf.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MahApps.Metro">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\MahApps.Metro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
     <Reference Include="XAMLMarkupExtensions">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\HDT\Hearthstone Deck Tracker\XAMLMarkupExtensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Controls\CardSelector.xaml.cs">
-      <DependentUpon>CardSelector.xaml</DependentUpon>
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
-    <Compile Include="Controls\ManualPackInsert.xaml.cs">
-      <DependentUpon>ManualPackInsert.xaml</DependentUpon>
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
-    <Compile Include="Controls\PityTimer\BarChartSingle.xaml.cs">
-      <DependentUpon>BarChartSingle.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PityTimer\PityTimerOverlay.xaml.cs">
-      <DependentUpon>PityTimerOverlay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PackWatcher.cs" />
-    <Compile Include="Controls\Cards.xaml.cs">
-      <DependentUpon>Cards.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\HistoryDatePicker.xaml.cs">
-      <DependentUpon>HistoryDatePicker.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Log.xaml.cs">
-      <DependentUpon>Log.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PackDropDown.xaml.cs">
-      <DependentUpon>PackDropDown.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PityTimer\BarChartPrev.xaml.cs">
-      <DependentUpon>BarChartPrev.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PityTimer\Label.xaml.cs">
-      <DependentUpon>Label.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PityTimer\PityTimer.xaml.cs">
-      <DependentUpon>PityTimer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Search.xaml.cs">
-      <DependentUpon>Search.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Settings\Credits.xaml.cs">
-      <DependentUpon>Credits.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Settings\General.xaml.cs">
-      <DependentUpon>General.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Settings\Settings.xaml.cs">
-      <DependentUpon>Settings.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Settings\Update.xaml.cs">
-      <DependentUpon>Update.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Statistic.xaml.cs">
-      <DependentUpon>Statistic.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Toast.xaml.cs">
-      <DependentUpon>Toast.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\Card.cs" />
-    <Compile Include="Entity\Index.cs" />
-    <Compile Include="IndexRepository.cs" />
-    <Compile Include="Entity\Pack.cs" />
-    <Compile Include="Event\PackOpenedEventArgs.cs" />
-    <Compile Include="History.cs" />
-    <Compile Include="ITitledElement.cs" />
-    <Compile Include="Plugin.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reflection.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="Storage\IHistoryStorage.cs" />
-    <Compile Include="Storage\ISettingsStorage.cs" />
-    <Compile Include="Storage\XmlHistory.cs" />
-    <Compile Include="Controls\History.xaml.cs">
-      <DependentUpon>History.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Storage\SettingsStorage.cs" />
-    <Compile Include="Update\Asset.cs" />
-    <Compile Include="Update\Release.cs" />
-    <Compile Include="Update\Updater.cs" />
-    <Compile Include="View\AbstractValueConverter.cs" />
-    <Compile Include="View\Cache\PityTimerRepository.cs" />
-    <Compile Include="View\CardViewModel.cs">
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
-    <Compile Include="View\DateConverter.cs" />
-    <Compile Include="View\DateTimeConverter.cs" />
-    <Compile Include="View\DecimalConverter.cs" />
-    <Compile Include="View\ManualPackInsert.cs">
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
-    <Compile Include="View\PackNameConverter.cs" />
-    <Compile Include="View\Average.cs" />
-    <Compile Include="View\AverageCollection.cs" />
-    <Compile Include="View\PercentConverter.cs" />
-    <Compile Include="View\PityTimer.cs" />
-    <Compile Include="View\Statistic.cs" />
-    <Compile Include="View\TimeConverter.cs" />
-    <Compile Include="WindowManager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Controls\Brushes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\CardSelector.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\History.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Cards.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\HistoryDatePicker.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Log.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ManualPackInsert.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PackDropDown.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PityTimer\BarChartPrev.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PityTimer\BarChartSingle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PityTimer\Label.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PityTimer\PityTimer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PityTimer\PityTimerOverlay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Search.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Settings\Credits.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Settings\General.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Settings\Settings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Settings\Update.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Statistic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Toast.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\1497613802_feather.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\1498438250_calendar-3.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\1498438378_line-chart_4.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\1498791216_calendar-2.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\if_search_322497.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\if__chart_2006795.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icons\if_circle-help-question-mark-glyph_763459.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\packs.json" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <Compile Remove="Entity\Player.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

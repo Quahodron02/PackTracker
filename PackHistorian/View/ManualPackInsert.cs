@@ -80,7 +80,7 @@ namespace PackTracker.View
 
         private readonly Dictionary<int, List<HDTCard>> _setsCache = new Dictionary<int, List<HDTCard>>();
 
-        internal static readonly List<int> GoldenPacks = new List<int> { 23, 603, 643, 686, 716, 737, 841, 850, 874, 904, 921, 932, 937, 938, 939, 952, 970 };
+        internal static readonly List<int> GoldenPacks = new List<int> { 23, 603, 643, 686, 716, 737, 841, 850, 874, 904, 921, 932, 937, 938, 939, 952, 970, 977 };
         private static readonly Dictionary<int, Func<HearthDb.Card, bool>> _filter = new Dictionary<int, Func<HearthDb.Card, bool>>
         {
             [1] = card => card.Set == CardSet.EXPERT1,
@@ -144,10 +144,13 @@ namespace PackTracker.View
             [937] = card => card.Set == CardSet.TITANS,
             [938] = card => card.Set is CardSet.BLACK_TEMPLE or CardSet.SCHOLOMANCE or CardSet.DARKMOON_FAIRE,
             [939] = card => card.Set == CardSet.BLACK_TEMPLE,
+            [941] = card => card.Set == CardSet.ISLAND_VACATION,
             [944] = card => card.Set is CardSet.THE_SUNKEN_CITY or CardSet.REVENDRETH or CardSet.RETURN_OF_THE_LICH_KING or CardSet.BATTLE_OF_THE_BANDS or CardSet.TITANS,
             [952] = card => card.Set == CardSet.WONDERS,
             [970] = card => card.Set == CardSet.WHIZBANGS_WORKSHOP,
             [971] = card => card.Set is CardSet.BATTLE_OF_THE_BANDS or CardSet.TITANS or CardSet.WONDERS,
+            [977] = card => card.Set is CardSet.ISLAND_VACATION,
+            [978] = card => card.Set is CardSet.BATTLE_OF_THE_BANDS or CardSet.TITANS or CardSet.WONDERS, // Why another Whizbang's Workshop Catch-up?
         };
 
         public ManualPackInsert()
