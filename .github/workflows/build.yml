@@ -27,7 +27,7 @@ jobs:
       - name: Build
         shell: pwsh
         run: |
-          dotnet PackTracker.sln
+          dotnet build PackTracker.sln
 
       - name: Upload
         uses: actions/upload-artifact@v1
