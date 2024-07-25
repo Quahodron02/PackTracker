@@ -1,6 +1,6 @@
 name: GitHub CI
 
-on: 
+on:
   push:
     branches: [master]
   pull_request:
@@ -27,7 +27,7 @@ jobs:
       - name: Build
         shell: pwsh
         run: |
-          msbuild PackTracker.sln
+          dotnet PackTracker.sln
 
       - name: Upload
         uses: actions/upload-artifact@v1
