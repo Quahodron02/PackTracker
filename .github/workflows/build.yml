@@ -22,7 +22,7 @@ jobs:
         run: |
           Invoke-WebRequest (Invoke-WebRequest 'https://api.github.com/repos/HearthSim/Hearthstone-Deck-Tracker/releases' | ConvertFrom-Json)[0].assets.browser_download_url -OutFile HDT.zip
           Expand-Archive HDT.zip
-          Rename-Item '.\HDT\Hearthstone Deck Tracker\Hearthstone Deck Tracker.exe' HearthstoneDeckTracker.exe
+          Rename-Item './HDT/Hearthstone Deck Tracker/Hearthstone Deck Tracker.exe' HearthstoneDeckTracker.exe
 
       - name: Build
         shell: pwsh
