@@ -47,11 +47,8 @@ namespace PackTracker.View
                 {
                     case Locale.UNKNOWN:
                     {
-                        if (Enum.TryParse(Config.Instance.SelectedLanguage, out Locale defaultLang))
-                        {
-                            return $"{PackNames[packId][defaultLang]} ({packId})";
-                        }
-                        break;
+                        var defaultLang = Plugin.GetLocale();
+                        return $"{PackNames[packId][defaultLang]} ({packId})";
                     }
                     default:
                     {

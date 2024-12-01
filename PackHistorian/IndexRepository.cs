@@ -53,14 +53,9 @@ namespace PackTracker
                 var name = DbCard.Name?.ToLower();
                 var text = DbCard.Text?.ToLower();
 
-                var locName = "";
-                var locText = "";
-
-                if (Enum.TryParse(Config.Instance.SelectedLanguage, out Locale lang))
-                {
-                    locName = DbCard.GetLocName(lang)?.ToLower();
-                    locText = DbCard.GetLocText(lang)?.ToLower();
-                }
+                var lang = Plugin.GetLocale();
+                var locName = DbCard.GetLocName(lang)?.ToLower();
+                var locText = DbCard.GetLocText(lang)?.ToLower();
 
                 this._sb.Append(locName).Append(name).Append(locText).Append(text);
                 this._index.Add(this._sb.ToString(), Index.Card.HDTCard.Id);

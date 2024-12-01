@@ -1,4 +1,6 @@
-﻿using Hearthstone_Deck_Tracker.Plugins;
+﻿using HearthDb.Enums;
+using Hearthstone_Deck_Tracker;
+using Hearthstone_Deck_Tracker.Plugins;
 using Hearthstone_Deck_Tracker.Utility.Toasts;
 using PackTracker.Storage;
 using PackTracker.Update;
@@ -21,7 +23,7 @@ namespace PackTracker
         private View.AverageCollection _averageCollection;
         private View.Cache.PityTimerRepository _pityTimers;
 
-        public static Version CurrentVersion { get; } = new Version("1.4.22");
+        public static Version CurrentVersion { get; } = new Version("1.4.23");
 
         public Plugin()
         {
@@ -130,6 +132,49 @@ namespace PackTracker
 
         public void OnUpdate()
         {
+        }
+
+        public static HearthDb.Enums.Locale GetLocale()
+        {
+            dynamic config = Config.Instance;
+            try
+            {
+                // SelectedLanguage will be removed
+                if (Enum.TryParse(config.SelectedLanguage, out Locale cardLang))
+                {
+                    return cardLang;
+                }
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                // LastSeenHearthstoneLang is the replacement
+                // internally used by Helper.GetCardLanguage()
+                if (Enum.TryParse(config.LastSeenHearthstoneLang, out Locale cardLang))
+                {
+                    return cardLang;
+                }
+            }
+            catch
+            {
+            }
+
+            try
+            {
+                // no card language found, fallback to HDT UI language
+                if (Enum.TryParse(config.Localization?.ToString(), out Locale cardLang))
+                {
+                    return cardLang;
+                }
+            }
+            catch
+            {
+            }
+
+            return HearthDb.Enums.Locale.enUS;
         }
     }
 }
